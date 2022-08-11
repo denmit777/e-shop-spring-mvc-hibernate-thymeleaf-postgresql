@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>https://www.online-shop.com</title>
+        <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body class="centered">
+        <h2>Dear <span th:text="${login}"></span>, <span th:text="${orderResult}"></span></h2><br/>
+        <h2><pre th:text="${orderList}"></pre></h2>
+        <h2>Total: $ <span th:text="${totalPrice}"></span></h2><br/>
+        <form action="/login" method="get">
+            <input name="submit" type="submit" value="Log out">
+        </form>
+    </body>
+</html>
+
+
